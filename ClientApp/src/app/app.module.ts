@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './Components/home/home.component';
 import { CounterComponent } from './Components/counter/counter.component';
-import { FetchDataComponent } from './Components/fetch-data/fetch-data.component';
+import { BookListComponent } from './Components/book-list/book-list.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { FetchDataComponent } from './Components/fetch-data/fetch-data.component
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent,
-    BookFormComponent
+    BookFormComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -27,8 +27,9 @@ import { FetchDataComponent } from './Components/fetch-data/fetch-data.component
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'book-form', component: BookFormComponent }
+      { path: 'book-form', component: BookFormComponent },
+      { path: 'book-list', component: BookListComponent }
+
     ])
   ],
   providers: [],
